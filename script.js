@@ -1,5 +1,11 @@
 $(function() {
   $('button').click(function() {
-    $('#test').hide();
+    $('p').hide();
+  });
+});
+
+$(document).ready(function() {
+  $('p').click(function() {
+    $(this).hide();
   });
 });
