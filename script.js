@@ -124,3 +124,30 @@ $("#btn1").click(function(){
       (index: " + i + ")";
     });
   });
+
+  //set atr
+
+  $("button").click(function(){
+    $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
+  });
+
+  
+  $("button").click(function(){
+    $("#w3s").attr("href", function(i, origValue){
+      return origValue + "/jquery/";
+    });
+  });
+
+  //Add Elements
+
+  $("p").append("Some appended text.");
+
+  $("p").prepend("Some prepended text.");
+
+  function appendText() {
+    var txt1 = "<p>Text.</p>";               // Create element with HTML 
+    var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+    var txt3 = document.createElement("p");  // Create with DOM
+    txt3.innerHTML = "Text.";
+    $("body").append(txt1, txt2, txt3);      // Append the new elements
+  }
