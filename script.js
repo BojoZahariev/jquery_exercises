@@ -158,9 +158,28 @@ $("#btn1").click(function(){
   $("img").before("Some text before");
 
   //Remove
-  
+
   $("#div1").remove();
   $("#div1").empty();
 
   $("p").remove(".test");
   $("p").remove(".test, .demo");
+
+  //jQuery Manipulating CSS
+
+  $("button").click(function(){
+    $("h1, h2, p").addClass("blue");
+    $("div").addClass("important");
+  });
+
+  $("button").click(function(){
+    $("h1, h2, p").removeClass("blue");
+  });
+
+  $("button").click(function(){
+    $("h1, h2, p").toggleClass("blue");
+  });
+
+  $("p").css("background-color");
+  $("p").css("background-color", "yellow");
+  $("p").css({"background-color": "yellow", "font-size": "200%"});
