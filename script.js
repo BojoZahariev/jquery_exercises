@@ -183,3 +183,31 @@ $("#btn1").click(function(){
   $("p").css("background-color");
   $("p").css("background-color", "yellow");
   $("p").css({"background-color": "yellow", "font-size": "200%"});
+
+  //jQuery Dimensions
+
+  $("button").click(function(){
+    var txt = "";
+    txt += "Width: " + $("#div1").width() + "</br>";
+    txt += "Height: " + $("#div1").height();
+    $("#div1").html(txt);
+  });
+
+  $("button").click(function(){
+    var txt = "";
+    txt += "Outer width: " + $("#div1").outerWidth() + "</br>";
+    txt += "Outer height: " + $("#div1").outerHeight();
+    $("#div1").html(txt);
+  });
+
+  $("button").click(function(){
+    var txt = "";
+    txt += "Outer width (+margin): " + $("#div1").outerWidth(true) + "</br>";
+    txt += "Outer height (+margin): " + $("#div1").outerHeight(true);
+    $("#div1").html(txt);
+  });
+
+  
+  $("button").click(function(){
+    $("#div1").width(500).height(500);
+  });
