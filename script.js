@@ -151,3 +151,8 @@ $("#btn1").click(function(){
     txt3.innerHTML = "Text.";
     $("body").append(txt1, txt2, txt3);      // Append the new elements
   }
+
+
+  $("img").after("Some text after");
+
+  $("img").before("Some text before");
