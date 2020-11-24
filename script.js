@@ -156,3 +156,11 @@ $("#btn1").click(function(){
   $("img").after("Some text after");
 
   $("img").before("Some text before");
+
+  //Remove
+  
+  $("#div1").remove();
+  $("#div1").empty();
+
+  $("p").remove(".test");
+  $("p").remove(".test, .demo");
