@@ -287,3 +287,37 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("p").not(".intro");
 });
+
+//jQuery - AJAX load() Method
+
+$("#div1").load("demo_test.txt");
+
+$("#div1").load("demo_test.txt #p1");
+
+$("button").click(function(){
+  $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
+    if(statusTxt == "success")
+      alert("External content loaded successfully!");
+    if(statusTxt == "error")
+      alert("Error: " + xhr.status + ": " + xhr.statusText);
+  });
+});
+
+//jQuery - AJAX get() and post() Methods
+
+$("button").click(function(){
+  $.get("demo_test.asp", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+});
+
+$("button").click(function(){
+  $.post("demo_test_post.asp",
+  {
+    name: "Donald Duck",
+    city: "Duckburg"
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+});
